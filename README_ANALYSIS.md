@@ -232,12 +232,12 @@ As noted: *"Aadhaar is capable of tracking the flux of the nation, the daily bir
 - Notebook-driven workflow with visualizations and actionable recommendations.
 
 ### Gaps to close before submission (4–5 day sprint)
-1. **Consolidated PDF**: Export the notebook (problem statement, datasets/columns used, methodology, visuals, and embedded code) to a single PDF as mandated. Use `jupyter nbconvert --to pdf Aadhaar_LifeEvent_IEI_Analysis.ipynb` (or HTML→PDF if LaTeX is unavailable).
+1. **Consolidated PDF**: Export the provided notebook (`Aadhaar_LifeEvent_IEI_Analysis.ipynb`) with problem statement, datasets/columns used, methodology, visuals, and embedded code to a single PDF as mandated. Use `jupyter nbconvert --to pdf Aadhaar_LifeEvent_IEI_Analysis.ipynb` (or HTML→PDF if LaTeX is unavailable).
 2. **Dataset documentation**: Add a short data dictionary (state/district/pincode codes, age bands, update types) and note any cleaning rules; include it in the PDF.
-3. **Parameter sensitivity**: Briefly show how IEI scores and event flags move when thresholds/weights shift (e.g., ±10% on IEI weights, z-score thresholds 1.3–1.8) to evidence robustness.
+3. **Parameter sensitivity**: Briefly show how IEI scores and event flags move when thresholds/weights shift (e.g., ±10% on IEI weights, z-score thresholds 1.3–1.8); highlight if rankings shift by >2 positions or if hotspot flags flip to prove robustness.
 4. **Confidence scoring**: Report confidence bands for each inferred life-event hotspot (z-score magnitude, sample size, recency) and call out low-volume regions separately.
 5. **Submission checklist**: Verify visuals cover (a) temporal trends, (b) geo rankings, (c) IEI component breakdown, (d) event-specific hotspots, (e) anomaly timelines, and include 2–3 executive “impact” slides.
-6. **Reproducibility sanity check**: Run the notebook end-to-end on a 50k-row sample to confirm it executes quickly; note the expected runtime and RAM in the PDF.
+6. **Reproducibility sanity check**: Run the notebook end-to-end on a sample of `min(50k, 5% of rows)` to confirm it executes quickly; note the expected runtime and RAM in the PDF so reviewers know how to size resources.
 
 ### Quick run guide for review
 - Open and run `Aadhaar_LifeEvent_IEI_Analysis.ipynb` end-to-end (replace file paths if datasets are relocated).
