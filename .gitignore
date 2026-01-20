@@ -1,0 +1,31 @@
+# Python virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Environment variables
+.env
+
+# Large data files (optional - uncomment if you don't want to upload datasets)
+# Datasets/
+
+# Output files (optional - uncomment if you don't want to upload outputs)
+# outputs/
